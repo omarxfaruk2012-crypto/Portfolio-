@@ -376,50 +376,6 @@
   .skill-icon svg{ width: 22px; height: 22px; }
   .skill-name{ font-size: 14px; font-weight: 600; }
 
-  /* ---------- projects ---------- */
-  .project-card{
-    padding: 40px;
-    display:grid; grid-template-columns: 1fr auto; gap: 32px; align-items:center;
-  }
-  .project-card h3{ font-size: 26px; margin: 0 0 12px; font-weight: 800; letter-spacing:-.01em; }
-  .project-card p{ font-size: 15.5px; line-height: 1.75; color: var(--ink-soft); margin: 0 0 18px; max-width: 520px; }
-  .tag-row{ display:flex; flex-wrap:wrap; gap:8px; }
-  .tag{
-    font-size: 12.5px; font-weight: 600; color: var(--blue-deep);
-    background: var(--blue-mist);
-    border: 1px solid var(--glass-border);
-    padding: 6px 12px; border-radius: 999px;
-  }
-  .project-visual{
-    width: 180px; height: 180px;
-    border-radius: 20px;
-    background: linear-gradient(155deg, var(--blue-mist), rgba(36,91,255,.02));
-    border: 1px solid var(--glass-border);
-    display:flex; align-items:center; justify-content:center;
-    position: relative;
-    overflow:hidden;
-  }
-  .project-visual span{
-    font-family:'Manrope',sans-serif;
-    font-size: 52px; font-weight: 800; color: var(--blue);
-    opacity:.85;
-  }
-  .future-card{
-    margin-top: 22px;
-    padding: 30px 34px;
-    display:flex; align-items:center; gap: 20px;
-    border-style: dashed;
-  }
-  .future-card .dot-ring{
-    width: 44px; height: 44px; flex: none;
-    border-radius: 50%;
-    border: 1.5px dashed var(--blue);
-    display:flex; align-items:center; justify-content:center;
-  }
-  .future-card .dot-ring::after{ content:''; width:8px; height:8px; border-radius:50%; background: var(--blue); animation: pulse 2.2s ease-in-out infinite; }
-  @keyframes pulse{ 0%,100%{ opacity:.4; transform: scale(.85); } 50%{ opacity:1; transform: scale(1.1); } }
-  .future-card h4{ margin: 0 0 4px; font-size: 16.5px; font-weight: 700; }
-  .future-card p{ margin:0; font-size: 14.5px; color: var(--ink-soft); }
 
   /* ---------- experience ---------- */
   .exp-card{
@@ -540,10 +496,8 @@
     .menu-btn{ display:flex; }
     section{ padding: 84px 0; }
     .hero{ padding-top: 118px; }
-    .services-grid{ grid-template-columns: 1fr; }
-    .project-card{ grid-template-columns: 1fr; }
-    .project-visual{ width: 100%; height: 140px; }
-    .exp-card{ padding: 32px 26px; }
+  .services-grid{ grid-template-columns: 1fr; }
+  .exp-card{ padding: 32px 26px; }
     .wrap{ padding: 0 20px; }
   }
   @media (max-width: 480px){
@@ -567,7 +521,6 @@
       <a href="#home">Home</a>
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
       <a href="#services">Services</a>
     </nav>
     <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
@@ -580,7 +533,6 @@
   <a href="#home" data-close>Home</a>
   <a href="#about" data-close>About</a>
   <a href="#skills" data-close>Skills</a>
-  <a href="#projects" data-close>Projects</a>
   <a href="#services" data-close>Services</a>
 </div>
 
@@ -592,9 +544,7 @@
       <h1><span>Omar Faruk</span></h1>
       <p class="role">Full-Stack Developer &amp; Android Developer</p>
       <p class="desc">Hi, I'm Omar Faruk — a Full-Stack Developer &amp; Android Developer. I build modern, responsive websites, web applications, and Android apps with a focus on clean design, performance, and practical user experiences.</p>
-      <div class="cta-row">
-        <a href="#projects" class="btn btn-primary">View Projects</a>
-      </div>
+
     </div>
   </section>
 
@@ -622,37 +572,6 @@
         <p>The languages, frameworks and tools I use to build web and Android products.</p>
       </div>
       <div class="skills-grid reveal-stagger" id="skillsGrid"></div>
-    </div>
-  </section>
-
-  <section id="projects">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <h2>Projects</h2>
-        <p>A look at what I've been building.</p>
-      </div>
-
-      <div class="project-card glass glass-interactive reveal">
-        <div>
-          <h3>Figmalabs</h3>
-          <p>Figmalabs is a tools-focused web platform designed to provide useful online tools through a clean and user-friendly interface.</p>
-          <div class="tag-row" style="margin-bottom:24px;">
-            <span class="tag">Full-Stack Web Project</span>
-            <span class="tag">Tools Platform</span>
-            <span class="tag">Responsive Web Experience</span>
-          </div>
-          <a href="https://figmalabs.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary">View Project</a>
-        </div>
-        <div class="project-visual" aria-hidden="true"><span>FL</span></div>
-      </div>
-
-      <div class="future-card glass reveal">
-        <div class="dot-ring" aria-hidden="true"></div>
-        <div>
-          <h4>More Projects Coming Soon</h4>
-          <p>I'm continuously working on new web and Android projects. More projects will be added here soon.</p>
-        </div>
-      </div>
     </div>
   </section>
 
