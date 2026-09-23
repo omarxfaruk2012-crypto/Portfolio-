@@ -164,15 +164,17 @@
   }
   .menu-btn span, .menu-btn span::before, .menu-btn span::after{
     content:''; position:absolute;
+    left: 50%; top: 50%;
     width: 17px; height: 1.6px; background: var(--ink);
     border-radius: 2px;
+    transform: translate(-50%, -50%);
     transition: transform var(--dur-s) var(--ease), opacity var(--dur-s) var(--ease);
   }
-  .menu-btn span::before{ transform: translateY(-6px); }
-  .menu-btn span::after{ transform: translateY(6px); }
+  .menu-btn span::before{ transform: translate(-50%, calc(-50% - 6px)); }
+  .menu-btn span::after{ transform: translate(-50%, calc(-50% + 6px)); }
   .menu-btn.open span{ background: transparent; }
-  .menu-btn.open span::before{ transform: rotate(45deg); }
-  .menu-btn.open span::after{ transform: rotate(-45deg); }
+  .menu-btn.open span::before{ transform: translate(-50%, -50%) rotate(45deg); }
+  .menu-btn.open span::after{ transform: translate(-50%, -50%) rotate(-45deg); }
 
   .mobile-menu{
     position: fixed; inset: 0;
